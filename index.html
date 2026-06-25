@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="app-header">
+      <p class="eyebrow">Daily Tasks</p>
+      <h1>待办清单</h1>
+      <p class="subtitle">把今天要做的事整理成清楚的一小步</p>
+    </header>
+
+    <div class="todo-form">
+      <input id="taskInput" type="text" placeholder="请输入任务">
+      <button id="addButton" type="button">添加</button>
+    </div>
+    <p id="hint" class="hint"></p>
+
+    <section class="toolbar">
+      <div class="filters" aria-label="任务筛选">
+        <button class="filter-button active" type="button" data-filter="all">全部</button>
+        <button class="filter-button" type="button" data-filter="active">未完成</button>
+        <button class="filter-button" type="button" data-filter="completed">已完成</button>
+      </div>
+    </section>
+
+    <ul id="taskList" class="task-list"></ul>
+    <p id="emptyState" class="empty-state">今天还没有任务，先添加一件小事吧。</p>
+
+    <section class="summary">
+      <span>总任务 <strong id="totalCount">0</strong></span>
+      <span>已完成 <strong id="completedCount">0</strong></span>
+      <span>未完成 <strong id="activeCount">0</strong></span>
+    </section>
+
+    <section class="actions">
+      <button id="clearCompletedButton" class="secondary-button" type="button">清除已完成</button>
+      <button id="clearAllButton" class="secondary-button danger-button" type="button">清空全部</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
