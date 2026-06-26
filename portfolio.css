@@ -12,3 +12,18 @@
 @media (max-width:760px) { .shell { width:min(calc(100% - 32px),var(--shell)); }.portfolio-nav { height:66px; }.portfolio-menu { display:flex; flex-direction:column; gap:4px; align-items:center; justify-content:center; width:38px; height:38px; margin-left:20px; border:0; background:transparent; cursor:pointer; }.portfolio-menu span { width:19px; height:2px; background:var(--ink); }.portfolio-links { position:absolute; top:66px; right:16px; left:16px; display:none; flex-direction:column; gap:0; padding:9px 16px; border:1px solid var(--line); border-radius:14px; background:#fffdfa; box-shadow:0 13px 28px rgba(30,29,27,.1); }.portfolio-links.open { display:flex; }.portfolio-links a { padding:9px 0; }.nav-back { display:none; }.portfolio-hero { min-height:560px; padding-top:85px; }.portfolio-hero h1 { font-size:clamp(3.6rem,16vw,6.3rem); }.hero-bottom { align-items:start; flex-direction:column; gap:18px; margin-top:35px; }.hero-bottom span { text-align:left; }.hero-art { right:-70px; bottom:32px; transform:scale(.7); transform-origin:bottom right; }.intro-band,.works-section,.skills-section,.contact-section { padding:78px 0; }.intro-layout { grid-template-columns:1fr; gap:25px; }.section-title { align-items:start; flex-direction:column; margin-bottom:30px; }.works-grid { gap:40px; }.work-visual { height:270px; }.design-skills { grid-template-columns:repeat(2,1fr); }.contact-card { padding:42px 28px; }.portfolio-footer { flex-wrap:wrap; gap:7px 18px; } }
 @media (max-width:460px) { .works-grid,.design-skills { grid-template-columns:1fr; }.work-visual { height:245px; }.design-skills article { min-height:190px; }.design-skills h3 { margin-top:36px; } .contact-card h2 { font-size:3rem; } }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; }.reveal { opacity:1; transform:none; transition:none; }.work-visual,.nav-back { transition:none; } }
+
+/* 作品信息：四个核心项目的详细说明与标签 */
+.works-grid { gap:54px 24px; }
+.work-info > p:first-child { margin:0 0 7px; color:var(--accent); font-size:.65rem; font-weight:850; letter-spacing:.11em; }
+.work-info h3 { font-size:1.28rem; }
+.work-info .work-category { display:block; margin-top:3px; color:#66625d; font-size:.8rem; font-weight:750; }
+.work-info .work-description { max-width:500px; margin:13px 0 15px; color:#77736c; font-size:.84rem; font-weight:400; letter-spacing:0; line-height:1.75; }
+.work-tags { display:flex; flex-wrap:wrap; gap:7px; }
+.work-tags b { padding:5px 8px; border:1px solid var(--line); border-radius:99px; color:#716e68; font-size:.63rem; font-weight:750; }
+.work-aigc .work-visual { padding:31px; background:#292345; color:#f7eaf4; }
+.work-aigc .work-visual > b { position:relative; z-index:2; font-size:2.75rem; line-height:.79; letter-spacing:-.1em; }
+.work-aigc .work-visual > span { position:absolute; z-index:2; right:28px; bottom:25px; color:#d1c8e4; font-size:.64rem; font-weight:800; letter-spacing:.1em; }
+.aigc-orb { position:absolute; right:-13px; bottom:-18px; width:250px; height:250px; border-radius:50%; background:radial-gradient(circle at 35% 32%,#e9e3ff 0 4%,#9d8add 21%,#684cbd 46%,#2d2450 71%); }
+.aigc-orb i { position:absolute; border:1px solid rgba(255,255,255,.5); border-radius:50%; }.aigc-orb i:first-child { inset:19px; }.aigc-orb i:nth-child(2) { inset:46px; }.aigc-orb i:nth-child(3) { inset:75px; }
+@media (max-width:460px) { .works-grid { grid-template-columns:1fr; }.work-info .work-description { font-size:.82rem; } }
