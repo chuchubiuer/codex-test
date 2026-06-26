@@ -3,118 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="cc 的个人前端练习展示页">
+  <meta name="description" content="cc 的 Creative Frontend Lab 前端练习展示网站">
   <title>cc 的第一个上线网页</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="background-glow glow-one"></div>
-  <div class="background-glow glow-two"></div>
+  <div class="page-grid" aria-hidden="true"></div>
+  <div class="glow glow-pink" aria-hidden="true"></div>
+  <div class="glow glow-blue" aria-hidden="true"></div>
 
-  <header class="site-header">
+  <header class="site-header" id="home">
     <nav class="nav container" aria-label="主导航">
-      <a class="logo" href="#home" aria-label="返回首页">cc<span>.dev</span></a>
-      <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links">
-        <span></span><span></span><span></span>
-        <span class="sr-only">打开导航菜单</span>
+      <a class="brand" href="#home" aria-label="cc.lab 首页">cc<span>.lab</span></a>
+      <button class="menu-toggle" type="button" aria-controls="nav-menu" aria-expanded="false">
+        <span></span><span></span><span></span><span class="sr-only">打开导航菜单</span>
       </button>
-      <div class="nav-links" id="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+      <div class="nav-menu" id="nav-menu">
+        <a class="nav-link active" href="#home">Home</a><a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#skills">Skills</a><a class="nav-link" href="#process">Process</a>
+        <a class="nav-link" href="#showcase">Showcase</a><a class="nav-link" href="#notes">Notes</a>
+        <a class="nav-link" href="#contact">Contact</a>
       </div>
+      <button class="nav-test test-trigger" type="button">上线测试 <span>↗</span></button>
     </nav>
   </header>
 
   <main>
-    <section class="hero container section" id="home">
-      <div class="hero-copy reveal">
-        <p class="eyebrow"><span></span> FRONTEND PRACTICE · 01</p>
-        <h1>cc 的第一个<br><em>上线网页</em></h1>
-        <p class="hero-lead">一个从零开始搭建、上线并持续迭代的前端练习项目。</p>
-        <p class="hero-intro">使用 HTML、CSS、JavaScript 和 GitHub Pages 完成。从一行代码开始，把学习过程做成可以被看见的作品。</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#skills">查看练习内容 <span>↓</span></a>
-          <button class="button button-secondary" id="celebrateButton" type="button">上线成功测试 <span>↗</span></button>
+    <section class="hero container section" aria-labelledby="hero-title">
+      <div class="hero-content hero-enter">
+        <p class="eyebrow"><i></i> CC · FRONTEND PRACTICE LAB</p>
+        <h1 id="hero-title">cc 的第一个<br><em>上线网页</em></h1>
+        <p class="hero-subtitle">一个从零开始搭建、发布并持续迭代的前端练习项目。</p>
+        <p class="hero-description">这个页面使用 HTML、CSS、JavaScript 和 GitHub Pages 完成，用来记录网页结构、视觉样式、交互效果和部署流程的学习过程。</p>
+        <div class="button-row">
+          <a class="button primary-button" href="#skills">查看练习内容 <b>↓</b></a>
+          <button class="button ghost-button test-trigger" type="button">上线成功测试 <b>↗</b></button>
         </div>
-        <p class="success-message" id="message" aria-live="polite"></p>
       </div>
 
-      <div class="hero-art reveal" aria-hidden="true">
-        <div class="orbit orbit-large"></div>
-        <div class="orbit orbit-small"></div>
-        <div class="code-window">
-          <div class="window-bar"><i></i><i></i><i></i><b>cc-practice.html</b></div>
-          <div class="code-lines">
-            <p><span>&lt;main&gt;</span></p>
-            <p class="indent"><b>build</b> <em>something nice</em></p>
-            <p class="indent"><b>learn</b> <em>one step at a time</em></p>
-            <p><span>&lt;/main&gt;</span></p>
-          </div>
+      <div class="lab-panel hero-enter" aria-label="前端练习状态面板">
+        <div class="panel-top"><span class="status-dot"></span><span>cc / practice-lab</span><span class="panel-more">•••</span></div>
+        <div class="panel-body">
+          <div class="panel-heading"><div><p>ONLINE STATUS</p><h2>Live <span>●</span></h2></div><span class="version">v 1.0</span></div>
+          <div class="stack-row"><span>HTML</span><div><i style="width: 88%"></i></div><b>88%</b></div>
+          <div class="stack-row"><span>CSS</span><div><i style="width: 76%"></i></div><b>76%</b></div>
+          <div class="stack-row"><span>JS</span><div><i style="width: 58%"></i></div><b>58%</b></div>
+          <div class="panel-code"><span>&lt;practice-mode&gt;</span><b>active</b><span>&lt;/practice-mode&gt;</span></div>
+          <div class="panel-footer"><span>GitHub Pages</span><strong>● DEPLOYED</strong></div>
         </div>
-        <div class="floating-chip chip-one">HTML</div>
-        <div class="floating-chip chip-two">CSS</div>
-        <div class="floating-chip chip-three">JS</div>
+        <span class="panel-chip chip-html">HTML</span><span class="panel-chip chip-css">CSS</span><span class="panel-chip chip-js">JS</span>
       </div>
     </section>
 
-    <section class="about section" id="about">
-      <div class="container about-grid reveal">
-        <div>
-          <p class="section-label">01 / ABOUT</p>
-          <h2>About This <em>Project</em></h2>
-        </div>
-        <div class="about-content">
-          <p class="about-highlight">这是一个用于学习网页结构、视觉样式和基础交互的练习项目。</p>
-          <p>它通过 GitHub Pages 完成公开访问，也会随着学习不断更新。每一次调整，都是对前端设计和开发流程多一点的理解。</p>
-          <div class="project-meta">
-            <span>HTML</span><span>CSS</span><span>JAVASCRIPT</span><span>GITHUB PAGES</span>
-          </div>
-        </div>
+    <section class="stats container" aria-label="项目数据亮点">
+      <article class="stat-card reveal"><strong>3</strong><div><h2>Files</h2><p>HTML / CSS / JS</p></div></article>
+      <article class="stat-card reveal"><strong>1</strong><div><h2>Website</h2><p>GitHub Pages</p></div></article>
+      <article class="stat-card reveal"><strong>5+</strong><div><h2>Sections</h2><p>Responsive Layout</p></div></article>
+      <article class="stat-card reveal"><strong>100%</strong><div><h2>Practice Driven</h2><p>Keep Building</p></div></article>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="container about-layout">
+        <div class="about-copy reveal"><p class="section-kicker">01 / ABOUT</p><h2>About This <em>Project</em></h2><p class="large-copy">这是 cc 的第一个公开上线网页练习。</p><p>目标不是一次性做完，而是通过不断修改、提交和部署，理解真实网页从本地到线上的过程。项目重点包括页面结构、视觉层级、响应式布局、交互反馈和 GitHub Pages 部署。</p></div>
+        <aside class="overview-card reveal"><div class="overview-title"><span>◈</span><h3>Project Overview</h3></div><dl><div><dt>Type</dt><dd>Frontend Practice</dd></div><div><dt>Tools</dt><dd>HTML / CSS / JS</dd></div><div><dt>Deploy</dt><dd>GitHub Pages</dd></div><div><dt>Status</dt><dd><i></i> Online</dd></div><div><dt>Update</dt><dd>Continuous</dd></div></dl></aside>
       </div>
     </section>
 
     <section class="section container" id="skills">
-      <div class="section-heading reveal">
-        <div><p class="section-label">02 / LEARNING</p><h2>Skills in <em>Progress</em></h2></div>
-        <p>把基础知识拆成小块，认真练习，也认真呈现。</p>
-      </div>
-      <div class="skill-grid">
-        <article class="skill-card reveal"><div class="skill-icon icon-html">&lt;/&gt;</div><p class="card-index">01</p><h3>HTML Structure</h3><p>学习页面骨架、语义化标签和内容组织。</p><span class="card-arrow">↗</span></article>
-        <article class="skill-card reveal"><div class="skill-icon icon-css">✦</div><p class="card-index">02</p><h3>CSS Visual Design</h3><p>学习布局、颜色、渐变、阴影、响应式和视觉层级。</p><span class="card-arrow">↗</span></article>
-        <article class="skill-card reveal"><div class="skill-icon icon-js">{ }</div><p class="card-index">03</p><h3>JavaScript Interaction</h3><p>学习按钮点击、状态反馈和简单页面互动。</p><span class="card-arrow">↗</span></article>
+      <div class="section-heading reveal"><div><p class="section-kicker">02 / LEARNING FOCUS</p><h2>Learning <em>Focus</em></h2></div><p>从代码基础到视觉表达，每一项都在持续练习和打磨。</p></div>
+      <div class="skills-grid">
+        <article class="skill-card reveal"><span class="skill-number">01</span><div class="skill-icon coral">&lt;/&gt;</div><h3>HTML Structure</h3><p>学习语义化标签、页面骨架和内容层级。</p><span class="card-plus">+</span></article>
+        <article class="skill-card reveal"><span class="skill-number">02</span><div class="skill-icon purple">▦</div><h3>CSS Layout</h3><p>学习 Flex、Grid、间距系统和响应式布局。</p><span class="card-plus">+</span></article>
+        <article class="skill-card reveal"><span class="skill-number">03</span><div class="skill-icon pink">✦</div><h3>Visual Design</h3><p>学习渐变、阴影、圆角、留白和视觉层级。</p><span class="card-plus">+</span></article>
+        <article class="skill-card reveal"><span class="skill-number">04</span><div class="skill-icon blue">{ }</div><h3>JavaScript Interaction</h3><p>学习按钮点击、状态提示、菜单切换和滚动交互。</p><span class="card-plus">+</span></article>
+        <article class="skill-card reveal"><span class="skill-number">05</span><div class="skill-icon yellow">↗</div><h3>GitHub Workflow</h3><p>学习 Commit、Push 和版本更新流程。</p><span class="card-plus">+</span></article>
+        <article class="skill-card reveal"><span class="skill-number">06</span><div class="skill-icon mint">◉</div><h3>GitHub Pages</h3><p>学习将静态网页发布成可访问的网站链接。</p><span class="card-plus">+</span></article>
       </div>
     </section>
 
-    <section class="process-section section" id="projects">
-      <div class="container">
-        <div class="section-heading reveal"><div><p class="section-label">03 / PROJECTS</p><h2>Practice <em>Process</em></h2></div><p>一次公开部署，串起从本地代码到线上网页的完整过程。</p></div>
-        <ol class="timeline reveal">
-          <li><span>01</span><div><h3>创建本地项目</h3><p>从简洁的 HTML、CSS 和 JavaScript 文件开始。</p></div></li>
-          <li><span>02</span><div><h3>上传 GitHub 仓库</h3><p>让代码拥有一个清晰、安全的线上版本记录。</p></div></li>
-          <li><span>03</span><div><h3>开启 GitHub Pages</h3><p>将仓库中的页面发布为可公开访问的网站。</p></div></li>
-          <li><span>04</span><div><h3>修改代码并重新部署</h3><p>每次更新都会成为页面成长的一部分。</p></div></li>
-          <li><span>05</span><div><h3>持续优化页面设计</h3><p>在内容、体验和视觉细节中不断练习。</p></div></li>
+    <section class="section process-section" id="process">
+      <div class="container"><div class="section-heading reveal"><div><p class="section-kicker">03 / PROCESS</p><h2>From Local to <em>Online</em></h2></div><p>一次上线练习，串起完整的网页发布流程。</p></div>
+        <ol class="process-list">
+          <li class="reveal"><span>01</span><div><h3>Create Project</h3><p>创建本地网页文件。</p></div></li><li class="reveal"><span>02</span><div><h3>Edit Code</h3><p>修改 index.html、style.css、script.js。</p></div></li><li class="reveal"><span>03</span><div><h3>Commit Changes</h3><p>使用 GitHub Desktop 提交修改。</p></div></li><li class="reveal"><span>04</span><div><h3>Push to GitHub</h3><p>把本地代码同步到远程仓库。</p></div></li><li class="reveal"><span>05</span><div><h3>Deploy Pages</h3><p>开启 GitHub Pages，让网页变成公开链接。</p></div></li><li class="reveal"><span>06</span><div><h3>Keep Iterating</h3><p>持续优化页面设计和交互效果。</p></div></li>
         </ol>
       </div>
     </section>
 
-    <section class="next section container" id="contact">
-      <div class="next-card reveal">
-        <div><p class="section-label">04 / NEXT</p><h2>Next <em>Plan</em></h2></div>
-        <ul><li>继续练习响应式布局</li><li>尝试制作作品展示页面</li><li>学习更多按钮、卡片、动效和页面组件</li><li>逐步形成个人前端练习作品集</li></ul>
-        <p class="next-note">stay curious, keep building.</p>
+    <section class="section container" id="showcase">
+      <div class="section-heading reveal"><div><p class="section-kicker">04 / SHOWCASE</p><h2>Practice <em>Showcase</em></h2></div><p>用 CSS 造出小小的项目预览，把练习成果变得看得见。</p></div>
+      <div class="showcase-grid">
+        <article class="showcase-card reveal"><div class="mockup landing-mockup"><div class="mockup-bar"><i></i><i></i><i></i></div><div class="mockup-hero"><span>creative web</span><b>Make it<br>visible.</b><i></i></div></div><p class="showcase-index">01 / LAYOUT</p><h3>Landing Page Design</h3><span>首页布局、视觉层级和按钮设计</span></article>
+        <article class="showcase-card reveal"><div class="mockup responsive-mockup"><div class="device desktop"><i></i><b></b><b></b><b></b></div><div class="device phone"><i></i><b></b></div></div><p class="showcase-index">02 / COMPONENT</p><h3>Responsive Components</h3><span>卡片、导航、移动端适配</span></article>
+        <article class="showcase-card reveal"><div class="mockup interaction-mockup"><div class="demo-toast">✓ Website is live!</div><button>Test interaction <span>→</span></button><div class="demo-lines"><i></i><i></i><i></i></div></div><p class="showcase-index">03 / MOTION</p><h3>Interaction Demo</h3><span>点击反馈、滚动动画和状态提示</span></article>
       </div>
     </section>
+
+    <section class="section notes-section" id="notes"><div class="container"><div class="section-heading reveal"><div><p class="section-kicker">05 / NOTES</p><h2>Study <em>Notes</em></h2></div><p>把每次练习里值得记住的小发现留下来。</p></div><div class="notes-grid"><article class="note-card reveal"><span>01</span><p>“网页不是只写代码，也需要考虑信息层级。”</p></article><article class="note-card reveal"><span>02</span><p>“每次修改后，都要保存、提交、推送，线上才会更新。”</p></article><article class="note-card reveal"><span>03</span><p>“CSS 的间距、颜色和圆角，会直接影响页面质感。”</p></article><article class="note-card reveal"><span>04</span><p>“部署成功后，网页就真正拥有了一个可以分享的链接。”</p></article></div></div></section>
+
+    <section class="section container"><div class="plan-card reveal"><div><p class="section-kicker">06 / NEXT PLAN</p><h2>Next <em>Plan</em></h2></div><ul><li>继续练习响应式布局</li><li>学习更多 CSS 动效</li><li>尝试制作作品展示页</li><li>增加真实项目案例</li><li>学习表单、弹窗、主题切换等常见组件</li><li>逐步形成个人前端练习作品集</li></ul></div></section>
+
+    <section class="cta-section section" id="contact"><div class="container cta-card reveal"><p class="section-kicker">07 / CONTACT</p><h2>Keep Building <em>with cc</em></h2><p>这个网页会继续随着学习过程不断更新。</p><div class="button-row"><a class="button primary-button" href="#home">回到顶部 <b>↑</b></a><button class="button ghost-button test-trigger" type="button">再次测试上线状态 <b>↗</b></button></div></div></section>
   </main>
 
-  <footer class="footer container">
-    <p>Built by <strong>cc</strong></p>
-    <p>HTML <span>·</span> CSS <span>·</span> JavaScript <span>·</span> GitHub Pages</p>
-  </footer>
-
+  <footer class="footer container"><p>Built by <strong>cc</strong></p><p>HTML <i>·</i> CSS <i>·</i> JavaScript <i>·</i> GitHub Pages</p><p>First online practice website</p></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"><span>✓</span> 网页已经成功上线啦！</div>
   <script src="script.js"></script>
 </body>
 </html>
