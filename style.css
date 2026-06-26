@@ -5,151 +5,158 @@
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "Microsoft YaHei", Arial, sans-serif;
-  background: linear-gradient(135deg, #f8f4ec 0%, #edf2f7 100%);
-  color: #172033;
+  overflow-x: hidden;
+  font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+  color: #243047;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(255, 211, 225, 0.8), transparent 28rem),
+    radial-gradient(circle at 88% 82%, rgba(189, 226, 255, 0.85), transparent 30rem),
+    linear-gradient(135deg, #fffaf5 0%, #f7f7ff 52%, #f4fbff 100%);
 }
 
 .page {
-  width: min(100%, 1040px);
+  width: min(100%, 1080px);
   margin: 0 auto;
-  padding: 72px 24px;
+  padding: 96px 24px 72px;
 }
 
 .hero {
-  max-width: 720px;
-  margin: 0 auto 34px;
+  max-width: 760px;
+  margin: 0 auto 52px;
   text-align: center;
 }
 
 .eyebrow {
-  margin: 0 0 12px;
-  color: #8b93a1;
-  font-size: 13px;
+  margin: 0 0 16px;
+  color: #7d6f9c;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.16em;
 }
 
 h1 {
   margin: 0;
-  font-size: 42px;
-  font-weight: 650;
-  letter-spacing: 0;
+  font-size: clamp(2.25rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1.2;
 }
 
 .subtitle {
-  margin: 16px 0 0;
-  color: #5e6878;
-  font-size: 18px;
-  line-height: 1.7;
+  margin: 20px 0 0;
+  color: #55627a;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.8;
 }
 
 .intro {
+  max-width: 600px;
   margin: 16px auto 0;
-  max-width: 620px;
-  color: #6b7280;
-  font-size: 15px;
+  color: #79849a;
+  font-size: 0.95rem;
   line-height: 1.9;
 }
 
 button {
-  margin-top: 28px;
-  height: 48px;
-  padding: 0 26px;
+  margin-top: 30px;
+  padding: 14px 25px;
   border: 0;
   border-radius: 999px;
-  background: #111827;
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
+  background: linear-gradient(135deg, #7664c9, #957dd7);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 14px 28px rgba(17, 24, 39, 0.16);
-  transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+  box-shadow: 0 12px 24px rgba(118, 100, 201, 0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 button:hover {
-  background: #020617;
-  box-shadow: 0 18px 34px rgba(17, 24, 39, 0.2);
+  box-shadow: 0 16px 30px rgba(118, 100, 201, 0.34);
   transform: translateY(-2px);
+}
+
+button:focus-visible {
+  outline: 3px solid rgba(118, 100, 201, 0.35);
+  outline-offset: 4px;
 }
 
 .message {
   min-height: 24px;
   margin: 16px 0 0;
-  color: #4b5563;
-  font-size: 14px;
+  color: #6655ae;
+  font-weight: 700;
 }
 
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  gap: 20px;
 }
 
 .card {
-  padding: 26px;
-  border: 1px solid rgba(226, 232, 240, 0.9);
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 18px 45px rgba(45, 38, 31, 0.08);
+  min-height: 210px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.64);
+  box-shadow: 0 18px 45px rgba(70, 77, 112, 0.1);
+  backdrop-filter: blur(12px);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card-number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
   width: 42px;
   height: 42px;
+  place-items: center;
   border-radius: 14px;
-  background: #f3f4f6;
-  color: #6b7280;
-  font-size: 14px;
-  font-weight: 700;
+  background: #eeeaff;
+  color: #7564b6;
+  font-size: 0.85rem;
+  font-weight: 800;
 }
 
 .card h2 {
-  margin: 22px 0 10px;
-  font-size: 20px;
-  font-weight: 650;
+  margin: 28px 0 10px;
+  font-size: 1.25rem;
 }
 
 .card p {
   margin: 0;
-  color: #6b7280;
-  font-size: 15px;
+  color: #6e7890;
   line-height: 1.8;
 }
 
 @media (max-width: 760px) {
   .page {
-    padding: 52px 18px;
+    padding: 64px 18px 48px;
   }
 
-  h1 {
-    font-size: 34px;
-  }
-
-  .subtitle {
-    font-size: 16px;
+  .hero {
+    margin-bottom: 40px;
   }
 
   .card-grid {
     grid-template-columns: 1fr;
   }
+
+  .card {
+    min-height: auto;
+  }
 }
 
 @media (max-width: 420px) {
   .page {
-    padding: 40px 16px;
-  }
-
-  h1 {
-    font-size: 30px;
+    padding-inline: 16px;
   }
 
   .card {
-    padding: 22px;
-    border-radius: 20px;
+    padding: 24px;
+    border-radius: 22px;
   }
 }

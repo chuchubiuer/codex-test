@@ -3,39 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的练习网页</title>
+  <meta name="description" content="cc 的前端练习主页">
+  <title>cc 的第一个上线网页</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="page">
-    <section class="hero">
-      <p class="eyebrow">Codex Practice</p>
-      <h1>我的个人练习网页</h1>
-      <p class="subtitle">用 HTML、CSS 和 JavaScript 做一个简洁现代的小页面。</p>
-      <p class="intro">
-        这里可以记录我的学习方向、练习作品和下一步计划。页面不复杂，但包含了网页最常见的结构：标题、介绍、按钮和卡片内容区。
-      </p>
-      <button id="learnButton" type="button">开始练习</button>
-      <p id="message" class="message"></p>
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">CC · FRONTEND PRACTICE</p>
+      <h1 id="page-title">cc 的第一个上线网页</h1>
+      <p class="subtitle">这是我用 GitHub Pages 发布的前端练习项目</p>
+      <p class="intro">从网页的骨架开始，一点点练习样式和互动，把学到的内容变成一个真正可以打开的小网站。</p>
+
+      <button id="celebrateButton" type="button">点击看看</button>
+      <p id="message" class="message" aria-live="polite"></p>
     </section>
 
-    <section class="card-grid" aria-label="练习内容">
+    <section class="card-grid" aria-label="前端练习内容">
       <article class="card">
         <span class="card-number">01</span>
         <h2>HTML 结构</h2>
-        <p>练习如何把标题、段落、按钮和内容区放到网页里。</p>
+        <p>练习网页内容和页面骨架</p>
       </article>
 
       <article class="card">
         <span class="card-number">02</span>
         <h2>CSS 样式</h2>
-        <p>练习背景、圆角、阴影、间距和响应式布局。</p>
+        <p>练习排版、颜色、按钮和响应式布局</p>
       </article>
 
       <article class="card">
         <span class="card-number">03</span>
         <h2>JS 互动</h2>
-        <p>练习点击按钮后，让页面出现一点简单反馈。</p>
+        <p>练习点击按钮后的简单反馈</p>
       </article>
     </section>
   </main>
